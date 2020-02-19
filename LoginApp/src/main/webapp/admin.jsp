@@ -29,20 +29,20 @@ Click the button to authorize. <br>
 	</tr>
 	<% while(rs.next()){ %>
 	<tr>
-	<td><%=rs.getString("name") %></td>
-	<td><%=rs.getString("email") %></td>
-	<td><%=rs.getString("address") %></td>
-	<td><%=rs.getString("mobile") %></td>
-	<td><button name="auth" type="submit" onclick="authorize()">Authorize</button></td>
-	<%
-		
-		String email = rs.getString("email");
-		String query1 = "UPDATE UserDetails SET authorized = 1 WHERE email LIKE '" +email + "';";
-		st.executeUpdate(query1);
-		%>
+	<td width="100"><%=rs.getString("name") %></td>
+	<td width="100"><%=rs.getString("email") %></td>
+	<td width="100"><%=rs.getString("address") %></td>
+	<td width="100"><%=rs.getString("mobile") %></td>
+	<td width="100"><form method="post" action="authorize.jsp"><button name="auth" type="submit">Authorize</button></form></td>
+
 	</tr>
 	</table>
 	<% } %>
+	
+	<br>
+	<br>
+
+	<a href="logout.jsp"><button type="submit">Logout</button></a>
 
 </body>
 </html>
