@@ -48,5 +48,6 @@
         </tr>
     </table>
     </form>
+    Already registered? Login <a href="login.jsp">here.</a>
 </body>
 </html>
