@@ -7,11 +7,11 @@
 	String mobileNo = request.getParameter("mobile");
 	String password = request.getParameter("password");
 
-	Class.forName("com.mysql.jdbc.Driver");
+	Class.forName("com.mysql.cj.jdbc.Driver");
 	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/loginapp", "root", "root");
 	Statement st = con.createStatement();
 	String query = "insert into UserDetails(name, email, address, NIC, mobile, password) VALUES ('" + name +"', '" + email +"','" + address +"','" + NIC +"','" + mobileNo +"','" + password +"')";
-	int execute = st.executeUpdate(query);
+	st.executeUpdate(query);
 	
 	response.sendRedirect("login.jsp");
 %>

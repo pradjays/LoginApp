@@ -1,9 +1,9 @@
-<%@ page import = java.sql.* %>
+<%@ page import = "java.sql.*" %>
 <%
 	String email = request.getParameter("email");
 	String password = request.getParameter("password");
 	
-	Class.forName("com.mysql.jdbc.Driver");
+	Class.forName("com.mysql.cj.jdbc.Driver");
 	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/loginapp", "root", "root");
 	Statement st = con.createStatement();
 	String query = "SELECT email, password FROM UserDetails WHERE (email = '" +email + "' AND password = '" +password + "')";

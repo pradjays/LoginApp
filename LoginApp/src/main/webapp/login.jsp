@@ -1,7 +1,7 @@
 <html>
 <body bgcolor="add8e6">
 <h1>Login</h1>
-	<form method="post" action="login.jsp">
+	<form method="post" action=loginBackend.jsp>
     <table>
     	<tr>
         <td>Email</td>

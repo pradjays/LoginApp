@@ -8,7 +8,7 @@
 </head>
 <body bgcolor="add8e6">
 <h1>Registration</h1>
-	<form method="post" action="login.jsp">
+	<form method="post" action="registrationBackend.jsp">
     <table>
     	<tr>
         <td>Full Name</td>
