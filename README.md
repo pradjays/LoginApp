@@ -10,6 +10,7 @@ Apache Tomcat Server (Version 7)
 MySQL
 Eclipse (or any other IDE)
 Maven
+JDK 11
 ```
 
 # Installation
