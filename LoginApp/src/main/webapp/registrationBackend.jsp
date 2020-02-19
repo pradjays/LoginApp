@@ -10,7 +10,7 @@
 	Class.forName("com.mysql.cj.jdbc.Driver");
 	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/loginapp", "root", "root");
 	Statement st = con.createStatement();
-	String query = "insert into UserDetails(name, email, address, NIC, mobile, password) VALUES ('" + name +"', '" + email +"','" + address +"','" + NIC +"','" + mobileNo +"','" + password +"')";
+	String query = "insert into UserDetails(name, email, address, NIC, mobile, password, authorized) VALUES ('" + name +"', '" + email +"','" + address +"','" + NIC +"','" + mobileNo +"','" + password +"', 0)";
 	st.executeUpdate(query);
 	
 	response.sendRedirect("login.jsp");
