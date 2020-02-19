@@ -33,7 +33,9 @@ Click the button to authorize. <br>
 	<td width="100"><%=rs.getString("email") %></td>
 	<td width="100"><%=rs.getString("address") %></td>
 	<td width="100"><%=rs.getString("mobile") %></td>
-	<td width="100"><form method="post" action="authorize.jsp"><button name="auth" type="submit">Authorize</button></form></td>
+	<td width="100"><form method="post" action="authorize.jsp">
+	<button type="submit" name="email" value="<%=rs.getString("email")%>">Authorize</button></form></td>
+
 
 	</tr>
 	</table>

@@ -22,6 +22,7 @@
 			response.sendRedirect("unauthorized.jsp");
 		}
 		}else{
+			response.sendRedirect("login.jsp");
 			System.out.println("Invalid details.");
 		}
 		
